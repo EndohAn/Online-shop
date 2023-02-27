@@ -12,6 +12,9 @@ import Catalog from "./Catalog";
 import Home from "./Home";
 import Delivery from "./Delivery";
 import About from "./About";
+import Goods from './Component/GoodsComponents/Goods';
+
+import Cart from './Component/Cart/Cart';
 
 
 function App() {
@@ -31,6 +34,13 @@ function App() {
 
   </Routes>
   </Router>
+
+  return(
+    <div className='App'>      
+      <Goods/>
+      <Cart/>
+    </div>
+  )
 }
 
 export default App;

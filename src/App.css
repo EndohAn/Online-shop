@@ -54,6 +54,29 @@ margin: 0 30px 10px;
   flex-direction: column;
   text-align: center;
 }
+.quantity{
+  display: flex;
+    justify-content: space-between;
+    margin-bottom: -20px;
+    margin-top: auto;
+}
+.quantity button{
+  background-color: #464141;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 19px;
+    margin: 0 10px 10px;
+    padding: 0 10px;
+}
+.product_bag{
+  background-color: #464141;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 20px;
+    margin-top: auto;
+    padding: 5px 20px;
+}
 .container{
   display: flex;
   justify-content: center;
@@ -66,4 +89,7 @@ margin: 0 30px 10px;
 }
 button{
   margin: 10px;
+}
+.icon{
+  width: 20px;
 }
