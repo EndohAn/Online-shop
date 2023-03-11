@@ -1,34 +1,95 @@
+
+
 import { createSlice } from "@reduxjs/toolkit";
 
 
-export const slice = createSlice({
-    name:"cart",
-    initialState:{
-        cartItems:[]
+export const cartSlice = createSlice ({
+    name: 'cart',
+    initialState: {
+        cartItems: [],
     },
-    reducers:{
-        addItemToCart:(state,action)=>{
-            const timeId=new Date().getTime()
+
+    reducers: {
+        addItemToCart: (state, action) => {
             state.cartItems.push({
-                id:timeId,                
-                goodId:action.payload.good.goodId,
-                quantity : action.payload.quantity,
-                totalprice:action.payload.quantity*action.payload.good.price
-            })
-        },
-        removeItemFromCart:(state,action)=>{
-            state.cartItems=state.cartItems.filter(
-                cartItem=>cartItem.id!==action.payload.cartItemId
+                ...action.payload.good,
+                quantity: action.payload.quantity,
+                totalPrice: action.payload.quantity * action.payload.good.price,
+            }
             )
-        }
+        },
+
+        updateQuantity: (state, action) => {
+            const newCart = [];
+            state.cartItems.forEach( item=> {
+                if (item.id === action.payload.good.id) {
+                    let countNew = item.quantity + action.payload.quantity
+                    let totalSum = item.price * countNew;
+                    const changeCart = { 
+                        ...item, 
+                        quantity: countNew, 
+                        totalPrice: totalSum };
+                    newCart.push ( changeCart );
+                } 
+                else {
+                    newCart.push(item)
+                }
+            })
+            state.cartItems = newCart;
+        },
+
+        incrementQuantityInCart: (state, action) => {
+            const item = state.cartItems.find( (item) => 
+                item.id === action.payload.cartItemId
+            )
+            item.quantity ++;
+        },
+
+        decrementQuantityInCart: (state, action) => {
+            const item = state.cartItems.find ( (item) => 
+            item.id === action.payload.cartItemId
+            )
+            if (item.quantity === 1) {
+                item.quantity =1 
+            } else {
+                item.quantity --;
+            }
+        },
+
+        removeItemFromCart: (state, action) => {
+            state.cartItems = state.cartItems.filter (
+                cartItem => cartItem.id !== action.payload.cartItemId
+            )
+        },
+
+
     }
 })
-export const getTotalPrice=state=>{
-    return state.cart.cartItems.reduce((total,cartItems)=>{
-        return cartItems.totalprice+total
-    },0)
+/*
+export const getTotalPrice = state => {
+    return state.cart.cartItems.reduce( (total, cartItems) => {
+        return cartItems.totalPrice + total 
+    },0 )
+}*/
+export const getTotalPrice = state =>  {
+    let totalPrice = 0
+    state.cart.cartItems.forEach( item => {
+        totalPrice += item.price * item.quantity
+    })
+    return totalPrice
 }
-export const{addItemToCart,removeItemFromCart}=slice.actions;
-export const getCartItems =state =>state.cart.cartItems;
-export const {addItemCart} =slice.actions;
-export default slice.reducer;
+
+export const getTotalQuantity = state  => {
+    let totalQuantity = 0;
+    state.cart.cartItems.forEach( item => {
+        totalQuantity += item.quantity;
+    },0 )
+    return totalQuantity;
+    
+}
+
+
+export const getCartItems = state => state.cart.cartItems;
+
+export const { addItemToCart, removeItemFromCart, updateQuantity, incrementQuantityInCart, decrementQuantityInCart } = cartSlice.actions;
+export default cartSlice.reducer;
