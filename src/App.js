@@ -48,7 +48,7 @@ function App() {
              <Link to ="/delivery" className='link link-mobile'> Delivery </Link>
                <Link to="/Cart" className='link link-mobile'> 
                  <div className='basket-box'>
-                     <img src= {process.env.PUBLIC_URL + "small-img/basket.png"}  alt="a basket" width="35rem"/> 
+                     <img  src= {process.env.PUBLIC_URL + "small-img/basket.png"}  alt="a basket" width="35rem"/> 
                          <span className='link-number'>{totalQuantity} </span>
                 </div>
                </Link>
@@ -59,7 +59,7 @@ function App() {
 
   <Link to="/Cart" className='basket-link'> 
     <div className='basket-box-mobile'>
-      <img src= {process.env.PUBLIC_URL + "small-img/basket.png"}  alt="a basket" width="23rem"/> 
+      <img  src= {process.env.PUBLIC_URL + "small-img/basket.png"}  alt="a basket" width="23rem"/> 
       <span className='link-number'>{totalQuantity} </span>
     </div>
   </Link>

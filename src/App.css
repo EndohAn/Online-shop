@@ -1,25 +1,30 @@
  .App {
   text-align: center;
 }
-
- /* nav{
-  background-color: aquamarine;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 15px;
-} */
-.link{
-  padding: 10px 40px;
-  text-decoration: none;
-  color: black;
-  font-weight: 500;
-   text-transform: uppercase; 
-  font-size: 24px;
-} 
 body{
   font-family: 'Poppins', sans-serif;
   background-color: beige;
+}
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #f8e0dd;
+} 
+
+
+.link{
+  padding: 10px 40px;
+  margin: 10px;
+  text-decoration: none;
+  color:#80489C;
+  font-weight: 500;
+  text-transform: uppercase; 
+  font-size: 24px;
+} 
+.link:hover{
+  color:#ac0bf1  ;
+  font-weight: 700;
 }
 .product{
     display: grid;
@@ -55,6 +60,7 @@ body{
 .price-title{
   font-weight: 600;
   font-size: 25px;
+ color:  #3a1d7e ;
 }
 
 .quantity{
@@ -78,7 +84,7 @@ body{
   margin: 10px;
 }
 .span-quantity{
-  color: red;
+  color: #3a1d7e ;
   cursor: pointer;
   font-size: 25px;
   font-weight: 600;
@@ -94,11 +100,11 @@ body{
 * header */
 
 /* .present-box {
-  display: flex;
+  /* display: flex;
   background-color: rgb(35, 65, 232);
   justify-content: center;
-  align-items: center;
-} */
+  align-items: center; */  
+*/
 .promo-box{
   display: flex;
   justify-content: center;
@@ -109,12 +115,12 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* margin-left: 20px; */
-  height: 100px;
-  justify-content: space-around;
+  /* height: 100px;
+  justify-content: space-around; */
 }
 .present-text {
-  color:#000;
+  color:#f6ada7;
+  font-size: 20px;
 }
 
 
@@ -123,26 +129,6 @@ body{
   opacity:0;
 }
 
-.nav-links {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  /* border-bottom: 1px solid #eee; */
-  /* height: 10vh;
-  margin-right: 30px; */
-} */
-
- .link {
-  margin: 20px;
-  text-decoration: none;
-  color: black;
-  font-weight: 500;
-}
-
-
-.link:hover {
-  color: #fff;
-}
 
 .basket-box {
   display: flex;
@@ -172,7 +158,11 @@ h1 {
 
 .h1-default {
   text-decoration: none;
-  color: black;
+  color:#432C7A ;
+}
+h3{
+  color:#432C7A ;
+
 }
 
  
@@ -183,6 +173,8 @@ h1 {
 
 .basket-box-mobile {
   display: none;
+  color:#80489C;
+
   
 }
 
@@ -247,10 +239,10 @@ h1 {
       z-index: 10;
 
     }
-
-
+   
     .basket-box {
       display: none;
+      color:#80489C;
     }
 }
 
@@ -306,6 +298,7 @@ h1 {
 .box-categories{
   display: flex;
   justify-content: space-around;
+  margin: 50px ;
 }
 
 
@@ -314,7 +307,7 @@ h1 {
   cursor: pointer;
   padding: 2px 12px;
   margin: 10px 0;
-  color: rgb(71, 215, 244);
+  color:#ac0bf1 ;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -322,15 +315,13 @@ h1 {
 }
 
 .categoryButton:hover {
-  background-color: rgba(71, 215, 244, 0.771);
-  color: #eee;
-  
+  background-color:  #f6ada7;
+  color: #fff;
 }
 
 
 .categoryButtonSelected {
-  background-color: rgba(71, 215, 244, 0.771);
-  color: #eee;
+  background-color:#f6ada7;  
 }
 
 .filter-btn-mobile {
@@ -433,7 +424,7 @@ h1 {
   font-size: 25px;
 }  */
 .quantity-btn {
-  border: 1px solid #000;
+  border: 1px solid #3a1d7e  ;
   background-color: transparent;
   cursor: pointer;
   flex: 1;
@@ -445,7 +436,7 @@ h1 {
 
 .add-to-cart-btn {
   font-size: 17px;
-  background-color:rgba(71, 215, 244, 0.993);
+  background-color: #58497d ;
   border: none;
   color: whitesmoke;
   padding: 7px 15px;
@@ -464,6 +455,7 @@ h1 {
 
 .symbol-quantity-book {
   width: 0.8rem;
+  color: #3a1d7e  ;
 } 
 
 
