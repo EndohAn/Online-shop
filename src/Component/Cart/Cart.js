@@ -64,7 +64,6 @@ const Cart = () => {
                 <form onSubmit={submitValue} className="promo-box">
                     <input className="promo-input"  placeholder="Введите промокод..." value={value} onChange={ changeValue} />
                     <input className="promo-btn"  type="submit" value="Add"/>
-                    {/* <button className="promo-btn" onClick={addPromo}>Add</button> */}
                     <h3 className="total">Total: $ {totalWithDiscount}</h3>
                 </form>
         

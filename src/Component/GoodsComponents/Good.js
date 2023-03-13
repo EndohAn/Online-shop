@@ -56,8 +56,7 @@ const Good= ({good}) => {
     }
 
 
-    return (
-        
+    return (       
       
 
         < div className="product_card">

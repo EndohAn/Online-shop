@@ -12,7 +12,7 @@ const AllCategories = () => {
             onClick={ () => setShowCategories(!showCategories)}>FILTER</button>
             <div className={showCategories ? "categories-box-mobile" : "categories-box box-categories"}
             onClick={ () => setShowCategories(false)}>
-            { ["all","traditional","exlusive"," order"].map (
+            { ["traditional","exlusive"," order","all"].map (
                 (category, index) =>
                 <Filter key={index} category={category}/>
             )}
