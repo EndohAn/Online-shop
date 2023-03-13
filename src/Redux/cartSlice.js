@@ -14,7 +14,7 @@ export const cartSlice = createSlice ({
             state.cartItems.push({
                 ...action.payload.good,
                 quantity: action.payload.quantity,
-                totalPrice: action.payload.quantity * action.payload.good.price,
+                totalPrice: action.payload.quantity*action.payload.good.price,
             }
             )
         },
@@ -66,11 +66,6 @@ export const cartSlice = createSlice ({
     }
 })
 
-// export const getTotalPrice = state => {
-//     return state.cart.cartItems.reduce( (total, cartItems) => {
-//         return cartItems.totalPrice + total 
-//     },0 )
-// }
 export const getTotalPrice = state =>  {
     let totalPrice = 0
     state.cart.cartItems.forEach( item => {

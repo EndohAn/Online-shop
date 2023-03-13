@@ -62,7 +62,6 @@ const Good= ({good}) => {
 
         < div className="product_card">
 
-         {/* <div className="product_info"> */}
              <div className="product_img" >
              <img src={`./${good.image  }.jpg `}width="300px" alt="good"/>
              </div>

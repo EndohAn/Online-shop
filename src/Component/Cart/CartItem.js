@@ -9,14 +9,14 @@ import { decrementQuantityInCart } from "../../Redux/cartSlice";
 const CartItem = ( {cartItem} ) => {
 
     const dispatch = useDispatch();
-    const cartItemPrice = (cartItem.price * cartItem.quantity).toFixed(2)
+    const cartItemPrice = (cartItem.price*cartItem.quantity).toFixed(2)
 
     
     return (
     <div>
         <div className="cart-box">
             <div className="cart-image-wrapper">
-             <img className="cart-image" src={`./${cartItem.image}.jpeg`} alt=" item"/> 
+              <img className="cart-image" src={`${cartItem.image}.jpg`} alt=" item"/>  
             </div>
 
             <div className="cart-inner">
