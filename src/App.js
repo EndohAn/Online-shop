@@ -41,7 +41,7 @@ function App() {
         <Router>
         <nav className={isMobile ? "nav-links-mobile" : "nav-links"} 
              onClick={ () => setIsMobile (false)}>
-             
+               {/* <img src={`./${image }.jpg `}width="30px" alt="good"/> */}
                {/* <img src={image }width="60px" alt="logo"/>       */}
               <Link to ="/" className='link link-mobile'> Home </Link>
               <Link to ="/about" className='link link-mobile'> About Us </Link>
