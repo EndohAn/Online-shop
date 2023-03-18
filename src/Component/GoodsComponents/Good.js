@@ -31,7 +31,7 @@ const Good= ({good}) => {
             const notify = () => toast.success("Добавлено в корзину", {
                 position: "top-right",
                 autoClose: 1000,
-                hideProgressBar: false,
+                hideProgressBar: true,
                 closeOnClick: true,
                 pauseOnHover: true,
                 draggable: true,
@@ -39,20 +39,20 @@ const Good= ({good}) => {
                 theme: "light",
             });
             notify()
-        } else {
-            dispatch (updateQuantity ( {good, quantity} ) )
-            const notify = () => toast.success("Удалено из корзины", {
-                position: "top-right",
-                autoClose: 1000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "light",
-            })
-            notify()
-        }
+        // } else {
+        //     dispatch (updateQuantity ( {good, quantity} ) )
+        //     const notify = () => toast.success("Удалено из корзины", {
+        //         position: "top-right",
+        //         autoClose: 1000,
+        //         hideProgressBar: false,
+        //         closeOnClick: true,
+        //         pauseOnHover: true,
+        //         draggable: true,
+        //         progress: undefined,
+        //         theme: "light",
+        //     })
+        //     notify()
+         }
     }
 
 
@@ -66,7 +66,7 @@ const Good= ({good}) => {
              </div>
            <div className="product_title"> 
              <h3>{good.firstName}</h3>
-             <p className="price-title">{good.price}</p>
+             <p className="price-title">{good.price} рублей</p>
               </div> 
              <div className="addLine">
              <div className="quantity">

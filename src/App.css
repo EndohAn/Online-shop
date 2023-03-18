@@ -98,13 +98,8 @@ body{
 
 
 * header */
+ 
 
-/* .present-box {
-  /* display: flex;
-  background-color: rgb(35, 65, 232);
-  justify-content: center;
-  align-items: center; */  
-*/
 .promo-box{
   display: flex;
   justify-content: center;
@@ -244,6 +239,13 @@ h3{
       display: none;
       color:#80489C;
     }
+
+    .product{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      justify-content: center;
+      justify-items: center; 
+    }
 }
 
 
@@ -273,6 +275,12 @@ h3{
   }
   .swal-size-sm {
     width: 300px !important;
+  }
+  .product{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    justify-content: center;
+    justify-items: center; 
   }
 
   h1 {
@@ -523,7 +531,7 @@ h3{
 
 
 .cart-image {
-  width: 5rem;
+  width: 15rem;
 
 }
 
@@ -692,7 +700,7 @@ h3{
   
   .promo-btn {
     width: 35%;
-    font-size: 12px;
+    font-size: 8px;
   }
 
 

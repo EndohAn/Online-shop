@@ -59,12 +59,12 @@ const Cart = () => {
                     (cartItem, index) => <CartItem key={index} cartItem={cartItem}/>
                 )}
         
-                <h3 className="total">Subtotal: $ {fixedTotalPrice}</h3>
-                <h3 className="total">Total number of items: { totalQuantity } </h3> 
+                <h3 className="total">Итого:  {fixedTotalPrice} рублей</h3>
+                <h3 className="total">Общее количество: { totalQuantity } </h3> 
                 <form onSubmit={submitValue} className="promo-box">
                     <input className="promo-input"  placeholder="Введите промокод..." value={value} onChange={ changeValue} />
-                    <input className="promo-btn"  type="submit" value="Add"/>
-                    <h3 className="total">Total: $ {totalWithDiscount}</h3>
+                    <input className="promo-btn"  type="submit" value="Добавить"/>
+                    <h3 className="total">Итого: {totalWithDiscount} рублей</h3>
                 </form>
         
             </div>

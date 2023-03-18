@@ -2,7 +2,7 @@
 import Home from "./Home";
  import Delivery from "./Delivery";
  import About from "./About";
-import Goods from './Component/GoodsComponents/Goods';
+// import Goods from './Component/GoodsComponents/Goods';
 import Cart from './Component/Cart/Cart';
 import './App.css';
 // Style
@@ -77,9 +77,9 @@ function App() {
 
     <Routes>
     <Route path="/" element={<Home/>}/>
-//   <Route path="/about" element={<About/>}/>
-//   <Route path="/delivery" element={<Delivery/>}/>      
-      <Route path="/Cart" element={<Cart/>}/>
+    <Route path="/about" element={<About/>}/>
+    <Route path="/delivery" element={<Delivery/>}/>      
+    <Route path="/Cart" element={<Cart/>}/>
     </Routes>
     </Router>
 

@@ -41,7 +41,7 @@ const CartItem = ( {cartItem} ) => {
 
 
             <div className="cart-price-wrapper">
-            <p className="cart-price">$ {cartItemPrice}</p>
+            <p className="cart-price">{cartItemPrice} рублей</p>
             </div>
         </div>
     </div>
