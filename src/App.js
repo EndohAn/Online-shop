@@ -41,11 +41,10 @@ function App() {
         <Router>
         <nav className={isMobile ? "nav-links-mobile" : "nav-links"} 
              onClick={ () => setIsMobile (false)}>
-               {/* <img src={`./${image }.jpg `}width="30px" alt="good"/> */}
-               {/* <img src={image }width="60px" alt="logo"/>       */}
-              <Link to ="/" className='link link-mobile'> Home </Link>
-              <Link to ="/about" className='link link-mobile'> About Us </Link>
-             <Link to ="/delivery" className='link link-mobile'> Delivery </Link>
+              
+              <Link to ="/" className='link link-mobile'> На главную </Link>
+              <Link to ="/about" className='link link-mobile'> О нас </Link>
+             <Link to ="/delivery" className='link link-mobile'> Доставка </Link>
                <Link to="/Cart" className='link link-mobile'> 
                  <div className='basket-box'>
                      <img  src= {process.env.PUBLIC_URL + "small-img/basket.png"}  alt="a basket" width="35rem"/> 
