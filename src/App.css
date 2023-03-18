@@ -12,7 +12,6 @@ body{
   background-color: #f8e0dd;
 } 
 
-
 .link{
   padding: 10px 40px;
   margin: 10px;
@@ -110,8 +109,7 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* height: 100px;
-  justify-content: space-around; */
+ 
 }
 .present-text {
   color:#f6ada7;
@@ -340,8 +338,8 @@ h3{
   .filter-btn-mobile {
     display: block;
     cursor: pointer;
-    border: 1px solid rgb(56, 163, 185);
-    background-color: rgb(71, 215, 244);
+    border: 1px solid #321c3c;
+    background-color:#80489C;
     margin: 0 40px;
     color: white;
     font-weight: 700;
@@ -352,7 +350,7 @@ h3{
   }
 
   .filter-btn-mobile:hover {
-    background-color: rgb(71, 215, 244);
+    background-color:rgb(151, 127, 163)
   }
 
   .categories-box {
@@ -615,8 +613,7 @@ h3{
 
 .cart-image,.cart-name, .quantity-box  {
   padding: 0 50px ;
-}
- 
+} 
 
 @media all and (max-width: 950px) {
   .cart-image,.cart-name, .quantity-box  {
@@ -630,7 +627,6 @@ h3{
     width: 90%;
   }
 }
-
 
 @media all and (max-width: 500px) {
   .cart {
@@ -702,6 +698,5 @@ h3{
     width: 35%;
     font-size: 8px;
   }
-
 
 }
