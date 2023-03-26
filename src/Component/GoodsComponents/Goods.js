@@ -21,8 +21,8 @@ const Goods = () => {
                 }
             )
             .map (
-            (good, index) => 
-            <Good key={index} good={good}/>
+            (good) => 
+            <Good key={good.id} good={good}/>
         ) }
         </div>
     )

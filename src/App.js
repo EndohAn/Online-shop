@@ -44,25 +44,23 @@ function App() {
               
               <Link to ="/" className='link link-mobile'> На главную </Link>
               <Link to ="/about" className='link link-mobile'> О нас </Link>
-             <Link to ="/delivery" className='link link-mobile'> Доставка </Link>
-               <Link to="/Cart" className='link link-mobile'> 
-                 <div className='basket-box'>
+              <Link to ="/delivery" className='link link-mobile'> Доставка </Link>
+              <Link to="/Cart" className='link link-mobile'> 
+                <div className='basket-box'>
                      <img  src= {process.env.PUBLIC_URL + "small-img/basket.png"}  alt="a basket" width="35rem"/> 
                          <span className='link-number'>{totalQuantity} </span>
                 </div>
-               </Link>
+              </Link>
         </nav>
 
 <div className='container'>
   <Link to="/" className='h1-default'> <h1>Матрешка</h1></Link> 
-
   <Link to="/Cart" className='basket-link'> 
     <div className='basket-box-mobile'>
       <img  src= {process.env.PUBLIC_URL + "small-img/basket.png"}  alt="a basket" width="23rem"/> 
       <span className='link-number'>{totalQuantity} </span>
     </div>
   </Link>
-
   <button className='mobile-menu-icon'
       onClick={ () => setIsMobile(!isMobile)}>
       {isMobile ? (
@@ -80,7 +78,7 @@ function App() {
     <Route path="/delivery" element={<Delivery/>}/>      
     <Route path="/Cart" element={<Cart/>}/>
     </Routes>
-    </Router>
+  </Router>
 
     
 
