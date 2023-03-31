@@ -1,13 +1,4 @@
-// import Home from "./Home";
-//  import Delivery from "./Delivery";
-//  import About from "./About";
 
-// import Goods from './Component/GoodsComponents/Goods';
-// import Cart from './Component/Cart/Cart';
-
-// import './App.css';
-// Style
-// import Promo from './Component/Promo/Promo';
 
 import { useSelector } from "react-redux";
 import { getTotalQuantity } from "../../Redux/cartSlice";
@@ -15,12 +6,7 @@ import { getTotalQuantity } from "../../Redux/cartSlice";
 
 import {
 
-  BrowserRouter as Router,
-
-  Routes,
-
-  Route,
-
+  
   Link
 
 } from "react-router-dom";
