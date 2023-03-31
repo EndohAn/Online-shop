@@ -8,8 +8,11 @@ import './App.css';
 // Style
 import Promo from './Component/Promo/Promo';
 
-import { useSelector } from "react-redux";
-import { getTotalQuantity } from './Redux/cartSlice';
+import Navbar from "./Component/Navbar/Navbar";
+
+// import { useSelector } from "react-redux";
+
+// import { getTotalQuantity } from './Redux/cartSlice';
 
 
 import {
@@ -30,8 +33,8 @@ import { useState } from 'react';
 
 function App() {
 
-  const totalQuantity = useSelector ( getTotalQuantity )
-  const [isMobile, setIsMobile] = useState(false)
+  // const totalQuantity = useSelector ( getTotalQuantity )
+  // const [isMobile, setIsMobile] = useState(false)
 
   return (
     <div>
@@ -39,7 +42,7 @@ function App() {
        <Promo /> 
     
         <Router>
-        <nav className={isMobile ? "nav-links-mobile" : "nav-links"} 
+        {/* <nav className={isMobile ? "nav-links-mobile" : "nav-links"} 
              onClick={ () => setIsMobile (false)}>
               
               <Link to ="/" className='link link-mobile'> На главную </Link>
@@ -51,9 +54,10 @@ function App() {
                          <span className='link-number'>{totalQuantity} </span>
                 </div>
               </Link>
-        </nav>
+        </nav> */}
+        <Navbar/>
 
-<div className='container'>
+{/* <div className='container'>
   <Link to="/" className='h1-default'> <h1>Матрешка</h1></Link> 
   <Link to="/Cart" className='basket-link'> 
     <div className='basket-box-mobile'>
@@ -69,7 +73,7 @@ function App() {
         <i className="fas fa-bars"></i>
       )}
   </button>
-</div>
+</div> */}
 
 
     <Routes>
